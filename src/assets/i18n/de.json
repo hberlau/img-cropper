@@ -1,0 +1,19 @@
+{  
+  "imgCropper":{
+    "choose": "Datei auswählen",
+    "chooseTooltip": "Bild aus Dateien auswählen",
+    "reset": "Zurücksetzen",
+    "resetTooltip": "Alle Änderungen rückgängig machen",
+    "horizontal": "Horizontal spiegeln",
+    "vertical": "Vertical spiegeln",
+    "zoomIn": "Vergrößern",
+    "zoomOut": "Verkleinern",
+    "rotateLeft": "Drehen 90° links",
+    "rotateRight": "Drehen 90° links",
+    "rotation": "Drehen",
+    "rotationManually": "Manuell drehen",
+    "contain": "Seitenverhältnisse beibehalten",
+    "fill": "Seitenverhältnis füllen",
+    "download": "Zugeschnittenes Bild herunterladen"
+  }
+}

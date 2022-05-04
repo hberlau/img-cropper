@@ -1,21 +1,33 @@
 import { Component, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Dimensions, ImageCroppedEvent, ImageTransform } from './image-cropper/interfaces/index';
 import {base64ToFile} from './image-cropper/utils/blob.utils';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    imageChangedEvent: any = '';
-    croppedImage: any = '';
-    canvasRotation = 0;
-    rotation = 0;
-    scale = 1;
-    showCropper = false;
-    containWithinAspectRatio = false;
-    transform: ImageTransform = {};
+    
+    public imageChangedEvent: any = '';
+    public croppedImage: any = '';
+    public canvasRotation = 0;
+    public rotation = 0;
+    public scale = 1;
+    public showCropper = false;
+    public containWithinAspectRatio = false;
+    public transform: ImageTransform = {};
+    private numberInputField: any | undefined;
+    @ViewChild('rotate') set content(numberInputField: any) {
+        if (numberInputField) {
+          this.numberInputField = numberInputField;
+        }
+      }
+    
+      constructor(private readonly translate: TranslateService) {
+        translate.setDefaultLang('en');
+    }
 
     fileChangeEvent(event: any): void {
         this.imageChangedEvent = event;
@@ -79,6 +91,7 @@ export class AppComponent {
         this.rotation = 0;
         this.canvasRotation = 0;
         this.transform = {};
+        this.numberInputField.nativeElement.value = undefined; 
     }
 
     zoomOut() {
@@ -101,10 +114,10 @@ export class AppComponent {
         this.containWithinAspectRatio = !this.containWithinAspectRatio;
     }
 
-    updateRotation() {
+    updateRotation(e: any) {
         this.transform = {
             ...this.transform,
-            rotate: this.rotation
+            rotate: e.target.value
         };
     }
 }

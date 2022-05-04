@@ -1,0 +1,19 @@
+{
+  "imgCropper":{
+    "choose": "Choose Image",
+    "chooseTooltip": "Choose an Image from Files",
+    "reset": "Reset",
+    "resetTooltip": "Reset all changes",
+    "horizontal": "Flip horizontal",
+    "vertical": "Flip vertical",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "rotateLeft": "Rotate 90° left",
+    "rotateRight": "Rotate 90° right",
+    "rotation": "Rotation",
+    "rotationManually": "Manually rotation in degree",
+    "contain": "Contain Within Aspect Ration",
+    "fill": "Fill Aspect Ratio",
+    "download": "Download cropped Image"
+    }
+}

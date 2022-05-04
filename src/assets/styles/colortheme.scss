@@ -1,0 +1,93 @@
+@import "~@angular/material/theming";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@include mat.core();
+
+// #37A58C
+$mat-rehau-green: (
+  50: #e7f4f1,
+  100: #c3e4dd,
+  200: #9bd2c6,
+  300: #73c0af,
+  400: #55b39d,
+  500: #37a58c,
+  600: #319d84,
+  700: #2a9379,
+  800: #238a6f,
+  900: #16795c,
+  A100: #b0ffe6,
+  A200: #7dffd6,
+  A400: #4affc6,
+  A700: #30ffbe,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+// #DD0060
+$mat-rehau-pink: (
+  50: #fbe0ec,
+  100: #f5b3cf,
+  200: #ee80b0,
+  300: #e74d90,
+  400: #e22678,
+  500: #dd0060,
+  600: #d90058,
+  700: #d4004e,
+  800: #cf0044,
+  900: #c70033,
+  A100: #ffeff2,
+  A200: #ffbcc8,
+  A400: #ff899f,
+  A700: #ff6f8a,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+// mandatory stuff for theming
+$mat-rehau-palette-primary: mat-palette($mat-rehau-green);
+$mat-rehau-palette-accent: mat-palette($mat-rehau-pink);
+
+// include the custom theme components into a theme object
+$mat-rehau-theme: mat-light-theme(
+  $mat-rehau-palette-primary,
+  $mat-rehau-palette-accent
+);
+
+// include the custom theme object into the angular material theme
+@include angular-material-theme($mat-rehau-theme);
