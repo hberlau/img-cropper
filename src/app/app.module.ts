@@ -16,16 +16,15 @@ import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-
 @NgModule({
-  imports:      [ 
+  imports: [
     CommonModule,
     HttpClientModule,
     BrowserModule,
     FormsModule,
     ImageCropperModule,
     BrowserAnimationsModule,
-    FormsModule, 
+    FormsModule,
     MatCardModule,
     TranslateModule,
     MatInputModule,
@@ -40,11 +39,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
       },
-    }), ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+    }),
+  ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }

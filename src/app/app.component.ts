@@ -1,131 +1,130 @@
 import { Component, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Dimensions, ImageCroppedEvent, ImageTransform } from './image-cropper/interfaces/index';
-import {base64ToFile} from './image-cropper/utils/blob.utils';
+import { base64ToFile } from './image-cropper/utils/blob.utils';
 
 @Component({
-    selector: 'my-app',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    public help = false;
-    public imageChangedEvent: any = '';
-    public croppedImage: any = '';
-    public canvasRotation = 0;
-    public rotation;
-    public scale = 1;
-    public showCropper = false;
-    public containWithinAspectRatio = false;
-    public transform: ImageTransform = {};
-    private numberInputField: any | undefined;
-    @ViewChild('rotate') set content(numberInputField: any) {
-        if (numberInputField) {
-          this.numberInputField = numberInputField;
-        }
-      }
-    
-      constructor(private readonly translate: TranslateService) {
-        translate.setDefaultLang('en');
+  public help = false;
+  public imageChangedEvent: any = '';
+  public croppedImage: any = '';
+  public canvasRotation = 0;
+  public rotation;
+  public scale = 1;
+  public showCropper = false;
+  public containWithinAspectRatio = false;
+  public transform: ImageTransform = {};
+  private numberInputField: any | undefined;
+  @ViewChild('rotate') set content(numberInputField: any) {
+    if (numberInputField) {
+      this.numberInputField = numberInputField;
     }
+  }
 
-    useLanguage(language: string): void {
-        this.translate.use(language);
-      }
-    
-    sendHelp(){
-        this.help =!this.help;
-    }  
+  constructor(private readonly translate: TranslateService) {
+    translate.setDefaultLang('en');
+  }
 
-    fileChangeEvent(event: any): void {
-        this.imageChangedEvent = event;
-    }
+  useLanguage(language: string): void {
+    this.translate.use(language);
+  }
 
-    imageCropped(event: ImageCroppedEvent) {
-        this.croppedImage = event.base64;
-        console.log(event, base64ToFile(event.base64));
-    }
+  sendHelp() {
+    this.help = !this.help;
+  }
 
-    imageLoaded() {
-        this.showCropper = true;
-        console.log('Image loaded');
-    }
+  fileChangeEvent(event: any): void {
+    this.imageChangedEvent = event;
+  }
 
-    cropperReady(sourceImageDimensions: Dimensions) {
-        console.log('Cropper ready', sourceImageDimensions);
-    }
+  imageCropped(event: ImageCroppedEvent) {
+    this.croppedImage = event.base64;
+    console.log(event, base64ToFile(event.base64));
+  }
 
-    loadImageFailed() {
-        console.log('Load failed');
-    }
+  imageLoaded() {
+    this.showCropper = true;
+    console.log('Image loaded');
+  }
 
-    rotateLeft() {
-        this.canvasRotation--;
-        this.flipAfterRotate();
-    }
+  cropperReady(sourceImageDimensions: Dimensions) {
+    console.log('Cropper ready', sourceImageDimensions);
+  }
 
-    rotateRight() {
-        this.canvasRotation++;
-        this.flipAfterRotate();
-    }
+  loadImageFailed() {
+    console.log('Load failed');
+  }
 
-    private flipAfterRotate() {
-        const flippedH = this.transform.flipH;
-        const flippedV = this.transform.flipV;
-        this.transform = {
-            ...this.transform,
-            flipH: flippedV,
-            flipV: flippedH
-        };
-    }
+  rotateLeft() {
+    this.canvasRotation--;
+    this.flipAfterRotate();
+  }
 
+  rotateRight() {
+    this.canvasRotation++;
+    this.flipAfterRotate();
+  }
 
-    flipHorizontal() {
-        this.transform = {
-            ...this.transform,
-            flipH: !this.transform.flipH
-        };
-    }
+  private flipAfterRotate() {
+    const flippedH = this.transform.flipH;
+    const flippedV = this.transform.flipV;
+    this.transform = {
+      ...this.transform,
+      flipH: flippedV,
+      flipV: flippedH,
+    };
+  }
 
-    flipVertical() {
-        this.transform = {
-            ...this.transform,
-            flipV: !this.transform.flipV
-        };
-    }
+  flipHorizontal() {
+    this.transform = {
+      ...this.transform,
+      flipH: !this.transform.flipH,
+    };
+  }
 
-    resetImage() {
-        this.scale = 1;
-        this.rotation = 0;
-        this.canvasRotation = 0;
-        this.transform = {};
-        this.numberInputField.nativeElement.value = undefined; 
-    }
+  flipVertical() {
+    this.transform = {
+      ...this.transform,
+      flipV: !this.transform.flipV,
+    };
+  }
 
-    zoomOut() {
-        this.scale -= .1;
-        this.transform = {
-            ...this.transform,
-            scale: this.scale
-        };
-    }
+  resetImage() {
+    this.scale = 1;
+    this.rotation = 0;
+    this.canvasRotation = 0;
+    this.transform = {};
+    this.numberInputField.nativeElement.value = undefined;
+  }
 
-    zoomIn() {
-        this.scale += .1;
-        this.transform = {
-            ...this.transform,
-            scale: this.scale
-        };
-    }
+  zoomOut() {
+    this.scale -= 0.1;
+    this.transform = {
+      ...this.transform,
+      scale: this.scale,
+    };
+  }
 
-    toggleContainWithinAspectRatio() {
-        this.containWithinAspectRatio = !this.containWithinAspectRatio;
-    }
+  zoomIn() {
+    this.scale += 0.1;
+    this.transform = {
+      ...this.transform,
+      scale: this.scale,
+    };
+  }
 
-    updateRotation(e: any) {
-        this.transform = {
-            ...this.transform,
-            rotate: e.target.value
-        };
-    }
+  toggleContainWithinAspectRatio() {
+    this.containWithinAspectRatio = !this.containWithinAspectRatio;
+  }
+
+  updateRotation(e: any) {
+    this.transform = {
+      ...this.transform,
+      rotate: e.target.value,
+    };
+  }
 }

@@ -2,6 +2,7 @@
   "imgCropper":{
     "languageSettings": "Sprache ändern",
     "help": "Hilfe",
+    "close": "Schließen",
     "choose": "Datei auswählen",
     "chooseTooltip": "Bild aus Dateien auswählen",
     "reset": "Zurücksetzen",

@@ -3,14 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ImageCropperComponent } from './component/image-cropper.component';
 
 @NgModule({
-    imports: [
-        CommonModule
-    ],
-    declarations: [
-        ImageCropperComponent
-    ],
-    exports: [
-        ImageCropperComponent
-    ]
+  imports: [CommonModule],
+  declarations: [ImageCropperComponent],
+  exports: [ImageCropperComponent],
 })
 export class ImageCropperModule {}
