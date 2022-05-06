@@ -17,6 +17,14 @@
     "rotationManually": "Manually rotation in degree",
     "contain": "Contain Within Aspect Ration",
     "fill": "Fill Aspect Ratio",
-    "download": "Download cropped Image"
+    "download": "Download cropped Image",
+    "helptext":{
+      "subtitle": "How to use ImageCropper",
+      "first": "Select language here",
+      "second": "For using the ImageCropper first choose an image from your computer. Please click \"Choose Image\".",
+      "third": "By using the red buttons you can rotate, flip or zoom the image. The rotation can also be changed manually in 1 degree increments with the input field. The aspect ratios can also be changed.",
+      "fourth": "You can reset all changes with the \"Reset\" button.",
+      "fivth": "Download the cropped image by clicking"
     }
+  }
 }

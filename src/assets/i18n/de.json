@@ -17,6 +17,14 @@
     "rotationManually": "Manuell drehen",
     "contain": "Seitenverhältnisse beibehalten",
     "fill": "Seitenverhältnis füllen",
-    "download": "Zugeschnittenes Bild herunterladen"
+    "download": "Zugeschnittenes Bild herunterladen",
+    "helptext":{
+      "subtitle": "So verwenden Sie den ImageCropper",
+      "first": "Wählen Sie hier die Sprache aus",
+      "second": "Um den ImageCropper zu verwenden, wählen Sie zunächst ein Bild von Ihrem Computer aus. Bitte klicken Sie auf \"Datei auswählen\".",
+      "third": "Mit den roten Buttons können Sie das Bild drehen, spiegeln oder zoomen. Über das Eingabefeld kann die Drehung auch manuell in 1 Grad Schritten verändert werden. Die Seitenverhältnisse können ebenfalls geändert werden.",
+      "fourth": "Mit der Schaltfläche \"Zurücksetzen\" können Sie alle Änderungen zurücksetzen.",
+      "fivth": "Laden Sie das Bild herunter, indem Sie hier klicken"
+    }
   }
 }

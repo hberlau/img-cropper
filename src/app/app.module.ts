@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    MatListModule,
     MatTooltipModule,
     TranslateModule.forRoot({
       loader: {
