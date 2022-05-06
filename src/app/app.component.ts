@@ -13,7 +13,7 @@ export class AppComponent {
     public imageChangedEvent: any = '';
     public croppedImage: any = '';
     public canvasRotation = 0;
-    public rotation = 0;
+    public rotation;
     public scale = 1;
     public showCropper = false;
     public containWithinAspectRatio = false;

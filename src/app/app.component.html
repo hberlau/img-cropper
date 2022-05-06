@@ -1,5 +1,7 @@
 <div class="pt-1">
 <mat-card class="start-card pt-1">
+    <mat-card-title>ImageCropper for Angular</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
 <label for="file" class="label"  matTooltip="{{ 'imgCropper.chooseTooltip' | translate }}">{{ 'imgCropper.choose' | translate }}</label> 
 <input type="file" id="file" style="display: none;" (change)="fileChangeEvent($event)" />
 
@@ -9,16 +11,16 @@ color="accent" (click)="resetImage()">{{ 'imgCropper.reset' | translate }}</butt
 <br />
 <br />
 <div class="buttonbox pl-1">
-<button mat-raised-button class="button"  matTooltip="{{ 'imgCropper.rotateLeft' | translate }}"
+<button mat-raised-button class="button rotationButton"  matTooltip="{{ 'imgCropper.rotateLeft' | translate }}"
 color="primary" (click)="rotateLeft()"><mat-icon>rotate_left</mat-icon>
 </button>
 <form>
 <mat-form-field appearance="outline">
 <mat-label>{{ 'imgCropper.rotation' | translate }}</mat-label>
-<input matInput #rotate [value]="rotation" matTooltip="Manually rotation in degree" placeholder="+/- X°" type="number" (keyup)="updateRotation($event)" /> 
+<input matInput #rotate [value]="rotation" matTooltip="Manually rotation in degree" placeholder="  +/- X°" type="number" (keyup)="updateRotation($event)" /> 
 </mat-form-field>
 </form>
-<button mat-raised-button class="button"  matTooltip="{{ 'imgCropper.rotateRight' | translate }}"
+<button mat-raised-button class="button rotationButton"  matTooltip="{{ 'imgCropper.rotateRight' | translate }}"
 color="primary" (click)="rotateRight()"><mat-icon>rotate_right</mat-icon>
 </button>
 </div>
@@ -39,7 +41,7 @@ color="primary" (click)="zoomOut()"><mat-icon>zoom_out</mat-icon>
 </button>
 </div>
 <br />
-<div class="buttonbox pl-1">
+<div class="buttonbox pl-05">
 <button mat-raised-button class="button" *ngIf="containWithinAspectRatio"
 color="primary"(click)="toggleContainWithinAspectRatio()">{{ 'imgCropper.fill' | translate }}
 </button>

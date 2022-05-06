@@ -1,11 +1,8 @@
 
-
 .start-card {
+  margin: 1rem;
   width: 31rem;
   height: 45rem;
-  mat-form-field {
-    width: 24rem;
-  } 
 }
 
 .button {
@@ -23,6 +20,9 @@ form {
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
   background: #DD0060;
   color: #ffffff;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
   box-sizing: border-box;
   position: relative;
   -webkit-user-select: none;
@@ -40,6 +40,7 @@ form {
   text-align: center;
   min-width: 64px;
   line-height: 36px;
+  height: 36px;
   border-radius: 4px;
   overflow: visible;
   transform: translate3d(0, 0, 0);
@@ -60,12 +61,12 @@ input[type=number]::-webkit-outer-spin-button {
 //input outline color
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
   color: #37A58C !important;
-  // opacity: 1!important;
 }
 
 .mat-form-field{
-  width: 5rem !important;
-  margin-top: -0.25rem;  
+  width: 3.5rem !important;  
+  font-size: 9.5px;
+
 }
 
 .save{
@@ -82,4 +83,10 @@ input[type=number]::-webkit-outer-spin-button {
 .buttonbox{
   margin: auto;
   width: 50%;
+}
+
+.rotationButton{
+  padding: 0.5rem;
+  height: 36px;
+
 }
