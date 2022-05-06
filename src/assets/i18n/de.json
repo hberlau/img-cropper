@@ -1,5 +1,6 @@
 {  
   "imgCropper":{
+    "languageSettings": "Sprache ändern",
     "choose": "Datei auswählen",
     "chooseTooltip": "Bild aus Dateien auswählen",
     "reset": "Zurücksetzen",

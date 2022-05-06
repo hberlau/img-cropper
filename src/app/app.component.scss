@@ -2,7 +2,13 @@
 .start-card {
   margin: 1rem;
   width: 31rem;
-  height: 45rem;
+  height: 50rem;
+}
+
+.language{
+  float: right;
+  margin-top: -2.75rem;
+  margin-right: -0.5rem;
 }
 
 .button {
@@ -18,7 +24,7 @@ form {
 
 .label {
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
-  background: #DD0060;
+  background: #8b8282;
   color: #ffffff;
   font-family: Roboto, Helvetica Neue, sans-serif;
   font-size: 14px;
@@ -45,11 +51,10 @@ form {
   overflow: visible;
   transform: translate3d(0, 0, 0);
   transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0.1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   margin-top: 0.5rem !important;
-  margin-left: 0.25rem;
+  margin-left: 0rem;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -60,24 +65,30 @@ input[type=number]::-webkit-outer-spin-button {
 
 //input outline color
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: #37A58C !important;
+  color: #8b8282 !important;
 }
 
 .mat-form-field{
-  width: 3.5rem !important;  
-  font-size: 9.5px;
+  width: 9.45rem !important;  
+  font-size: 12px;
+  padding-top: 0.5rem;
+  padding-left: 0.25rem;
 
 }
 
 .save{
   margin-top: -1.5rem !important;
-  color: #37A58C;
+  color: #8b8282;
   font-size: 24px;
 }
 
 .reset{
   float: right;
   margin-top: 0.6rem;
+}
+
+.contain{
+  width: 214.68px;
 }
 
 .buttonbox{

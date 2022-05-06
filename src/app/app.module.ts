@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
+import { MatMenuModule } from '@angular/material/menu';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
@@ -31,6 +32,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
     MatTooltipModule,
     TranslateModule.forRoot({
       loader: {

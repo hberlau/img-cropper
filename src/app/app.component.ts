@@ -29,6 +29,10 @@ export class AppComponent {
         translate.setDefaultLang('en');
     }
 
+    useLanguage(language: string): void {
+        this.translate.use(language);
+      }
+      
     fileChangeEvent(event: any): void {
         this.imageChangedEvent = event;
     }
