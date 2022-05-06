@@ -1,6 +1,7 @@
 {
   "imgCropper":{
     "languageSettings": "Language settings",
+    "help": "Help",
     "choose": "Choose Image",
     "chooseTooltip": "Choose an Image from Files",
     "reset": "Reset",

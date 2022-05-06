@@ -9,7 +9,7 @@ import {base64ToFile} from './image-cropper/utils/blob.utils';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    
+    public help = false;
     public imageChangedEvent: any = '';
     public croppedImage: any = '';
     public canvasRotation = 0;
@@ -32,7 +32,11 @@ export class AppComponent {
     useLanguage(language: string): void {
         this.translate.use(language);
       }
-      
+    
+    sendHelp(){
+        this.help =!this.help;
+    }  
+
     fileChangeEvent(event: any): void {
         this.imageChangedEvent = event;
     }

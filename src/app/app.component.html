@@ -2,6 +2,15 @@
 <mat-card class="start-card pt-1">
     <mat-card-title>ImageCropper for Angular</mat-card-title>
     <button 
+    class="help"
+    color="primary"
+    mat-icon-button
+    matTooltip="{{ 'imgCropper.help' | translate }}"
+    (click)="sendHelp()"
+>
+    <mat-icon>help_outline</mat-icon>
+</button>
+    <button 
         class="language"
         color="primary"
         mat-icon-button
@@ -90,6 +99,18 @@ color="accent" (click)="resetImage()">{{ 'imgCropper.reset' | translate }}</butt
 </div>
 <img [src]="croppedImage" [style.border]="croppedImage ? '1px solid #CC0000' : 'none'" />
 <a class="save" matTooltip="{{ 'imgCropper.download' | translate }}" *ngIf="croppedImage" [href]=croppedImage download><mat-icon> save_alt </mat-icon></a>
+</mat-card>
+<mat-card *ngIf="help" class="help-card pt-1">
+    <mat-card-title>{{ 'imgCropper.help' | translate }}</mat-card-title>
+    <button 
+    class="language"
+    color="primary"
+    mat-icon-button
+    matTooltip="{{ 'imgCropper.help' | translate }}"
+    (click)="sendHelp()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
 </mat-card>
 </div>
 

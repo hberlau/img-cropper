@@ -3,12 +3,26 @@
   margin: 1rem;
   width: 31rem;
   height: 50rem;
+  float: left;
+}
+
+.help-card {
+  margin: 1rem;
+  margin-left: 36rem;
+  width: 31rem;
+  height: 50rem;
 }
 
 .language{
   float: right;
-  margin-top: -2.75rem;
+  margin-top: -2.65rem;
   margin-right: -0.5rem;
+}
+
+.help{
+    float: right;
+    margin-top: -2.65rem;
+    margin-right: 1.25rem;
 }
 
 .button {
@@ -101,3 +115,4 @@ input[type=number]::-webkit-outer-spin-button {
   height: 36px;
 
 }
+
