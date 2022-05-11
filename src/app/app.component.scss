@@ -115,3 +115,18 @@ input[type='number']::-webkit-outer-spin-button {
   padding: 0.5rem;
   height: 36px;
 }
+
+svg {
+  padding-top: 10rem;
+  padding-left: 9rem;
+  color: #CC0000;
+  animation: logo-ani 3s linear infinite;
+}
+
+@keyframes logo-ani {
+  0%   {color:#CC0000;}
+  30%  {color:#ad0000;}
+  50%  {color:#f0b3b3;}
+  80%  {color:#ad0000;}
+  100% {color:#CC0000;}
+  }
